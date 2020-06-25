@@ -65,7 +65,7 @@ Co-curriculum is distributed in 3 ranges ie, poor, average and good. If number o
  
   <table>
     <tr>
-     <td><img src="https://github.com/tatae3012/Prolog/blob/master/Fuzzy%20Inference%20System/ScreenShots/7.png"></td>
+     <td><img src="https://github.com/tatae3012/Prolog/blob/master/Fuzzy%20Inference%20System/ScreenShots/7.jpg"></td>
     </tr>
   </table>
   
@@ -73,7 +73,7 @@ Performance is distributed in three ranges ie, poor, average and good. If the cu
 
   <table>
     <tr>
-     <td><img src="https://github.com/tatae3012/Prolog/blob/master/Fuzzy%20Inference%20System/ScreenShots/8.png"></td>
+     <td><img src="https://github.com/tatae3012/Prolog/blob/master/Fuzzy%20Inference%20System/ScreenShots/8.jpg"></td>
     </tr>
   </table>
  
@@ -83,15 +83,15 @@ Based on the nature of FIS input and output variables used and general logical s
 <pr>
 RULE BASE: 
 	1. If (academics is good) then (performance is good) (1)  
-	2. If (academics is average) and (sports is good) and (co-curricular is good) then (performance is good) (1)  
-	3. If (academics is average) and (sports is good) and (co-curricular is not good) then (performance is good) (1)  
-	4. If (academics is average) and (sports is not good) and (co-curricular is good) then (performance is good) (1)  
-	5. If (academics is average) and (sports is average) and (co-curricular is average) then (performance is average) (1)  
-	6. If (academics is average) and (sports is poor) and (co-curricular is poor) then (performance is poor) (1)  
-	7. If (academics is average) and (sports is average) and (co-curricular is poor) then (performance is average) (1)  
-	8. If (academics is average) and (sports is poor) and (co-curricular is average) then (performance is average) (1)  
-	9. If (academics is poor) and (sports is good) and (co-curricular is good) then (performance is average) (1)  
-	10. If (academics is poor) and (sports is not good) and (co-curricular is not good) then (performance is poor) (1)  
+	2. If (academics is average) and (sports is good) and (co-curricular is good) then (performance is good) 
+	3. If (academics is average) and (sports is good) and (co-curricular is not good) then (performance is good) 
+	4. If (academics is average) and (sports is not good) and (co-curricular is good) then (performance is good) 
+	5. If (academics is average) and (sports is average) and (co-curricular is average) then (performance is average) 
+	6. If (academics is average) and (sports is poor) and (co-curricular is poor) then (performance is poor) 
+	7. If (academics is average) and (sports is average) and (co-curricular is poor) then (performance is average) 
+	8. If (academics is average) and (sports is poor) and (co-curricular is average) then (performance is average) 
+	9. If (academics is poor) and (sports is good) and (co-curricular is good) then (performance is average)  
+	10. If (academics is poor) and (sports is not good) and (co-curricular is not good) then (performance is poor) 
 
   <table>
     <tr>
@@ -101,15 +101,31 @@ RULE BASE:
 </pr>  
  
 ### Results
-•	Develop FIS to compute performance of the student 	 
- 
-TEST CASES: 
-   
- 
- 
- 
- 
- 
-  
 
-The inputs are given to the system and based on the plots and rules, first fuzzification and after that defuzzification takes place. We have used centroid defuzzification logic, since we have 3 inputs- the centroid is the optimal point.
+We get the following results on developing FIS to compute performance of the student. 	 
+ 
+  <table>
+    <tr>
+     <td><img src="https://github.com/tatae3012/Prolog/blob/master/Fuzzy%20Inference%20System/ScreenShots/10.jpg"></td>
+    </tr>
+  </table>
+   
+  <table>
+    <tr>
+     <td><img src="https://github.com/tatae3012/Prolog/blob/master/Fuzzy%20Inference%20System/ScreenShots/11.jpg"></td>
+    </tr>
+  </table> 
+ 
+  <table>
+    <tr>
+     <td><img src="https://github.com/tatae3012/Prolog/blob/master/Fuzzy%20Inference%20System/ScreenShots/12.jpg"></td>
+    </tr>
+  </table> 
+ 
+   <table>
+    <tr>
+     <td><img src="https://github.com/tatae3012/Prolog/blob/master/Fuzzy%20Inference%20System/ScreenShots/13.jpg"></td>
+    </tr>
+  </table>
+  
+The inputs are given to the system and based on the plots and rules, first fuzzification and after that defuzzification takes place. Centroid defuzzification logic is used, since we have 3 inputs thus, centroid is the optimal point.
