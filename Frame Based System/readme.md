@@ -22,7 +22,7 @@ a. Add a new frame =  add(Frame,Attributes) :- frame(Frame,Attributes),write(fra
 b. Delete a frame  =  delete(Frame) :- retract(frame(Frame,_)).
                       delete(Frame) :- error(['No frame ', Frame, ' to delete']).                                          
 
-* c. Query a frame   =  query(Frame,Slot,Value) :- frame(Frame,Slots),member(Slot-Value,Slots).
-                      * query(Frame,Slot,Value) :- frame(Frame,Slots),member(is_aClass,Slots),query(Class,Slot,Value).
-                      * query(Frame,Slot,Value) :- frame(Frame,Slots),member(a_part_ofClass,Slots),query(Class,Slot,Value).
-                      * query(Frame,Slot,Value) :- frame(Frame,Slots),member(akoParent,Slots),query(Parent,Slot,Value).
+c. Query a frame   =  query(Frame,Slot,Value) :- frame(Frame,Slots),member(Slot-Value,Slots).<br/>
+                      query(Frame,Slot,Value) :- frame(Frame,Slots),member(is_aClass,Slots),query(Class,Slot,Value).<br/>
+                      query(Frame,Slot,Value) :- frame(Frame,Slots),member(a_part_ofClass,Slots),query(Class,Slot,Value).<br/>
+                      query(Frame,Slot,Value) :- frame(Frame,Slots),member(akoParent,Slots),query(Parent,Slot,Value).<br/>
