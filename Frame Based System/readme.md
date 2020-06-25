@@ -15,14 +15,15 @@ A prototype of Frame Based System (FBS) for University application.
 ### How to Use
 
 The frames provided in fbs.fis file can be used to:
-
+<pre>
 a. Add a new frame =  add(Frame,Attributes) :- frame(Frame,Attributes),write(frame(Frame,Attributes)),write('already exists'),!.<br/>
                       add(Frame,Attributes) :- asserta(frame(Frame,Attributes)),write('Frame is added')
                                                   
 b. Delete a frame  =  delete(Frame) :- retract(frame(Frame,_)).<br/>
-                      *delete(Frame) :- error(['No frame ', Frame, ' to delete']).                                          
+                      delete(Frame) :- error(['No frame ', Frame, ' to delete']).                                          
 
 c. Query a frame   =  query(Frame,Slot,Value) :- frame(Frame,Slots),member(Slot-Value,Slots).<br/>
                       query(Frame,Slot,Value) :- frame(Frame,Slots),member(is_aClass,Slots),query(Class,Slot,Value).<br/>
                       query(Frame,Slot,Value) :- frame(Frame,Slots),member(a_part_ofClass,Slots),query(Class,Slot,Value).<br/>
                       query(Frame,Slot,Value) :- frame(Frame,Slots),member(akoParent,Slots),query(Parent,Slot,Value).<br/>
+</pre>
