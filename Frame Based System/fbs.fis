@@ -1,0 +1,43 @@
+-use_module(library(lists)).
+-dynamic frame2.
+%to make the frames dynamic this clause is added
+%the frames based on the NOF of university attached
+
+frame(university,[phone-011881800, address-delhi]).
+frame(department,[a_part_of-university,programme([btech,mtech,phd])]).
+frame(course,[a_part_of-department,hours-5,credits(range,1.5,6)]).
+frame(ai,[inst-course,credits-4]).
+frame(faculty,[a_part_of-department,age(range,25,70),qual-pg]).
+frame(saroj_kaushik,[is_a-faculty,age-53,qual-phd]).
+frame(student,[a_part_of-department,roll_no(range,0001,9999),age(range,16,40)]).
+frame(vanshika,[is_a-student,roll_no-1234,age-20]).
+frame(infrastructure,[a_part_of-university,area-fifteen_hundred_sq_ft]).
+frame(sports_complex,[ako-infrastructure,area-five_hundred_sq_ft,type-outdoors]).
+frame(gym,[a_part_of-sports_complex,type-indoor]).
+frame(cricket_field,[a_part_of-sports_complex]).
+frame(football_field,[a_part_of-sports_complex,area-seven_hundred_sq_ft]).
+frame(hostel,[ako-infrastructure,floors-5,rooms-180]).
+frame(two_A,[inst-hostel,rooms-150]).
+frame(block,[a_part_of-university,rooms(range,20,50)]).
+frame(d_block,[is_a-block,rooms-45]).
+frame(library,[is_a-block,rooms-20]).
+frame(research_block,[is_a-block,rooms-25]).
+%the add module adds the given Frame with Attributes to the database using the assert function
+%the asserta clause adds the file in the beginning of the database
+%if the same frame is already present, it returns back with a comment-already exists
+
+add(Frame,Attributes) - frame(Frame,Attributes),write(frame(Frame,Attributes)),write(' already
+exists'),!.
+add(Frame,Attributes) - asserta(frame(Frame,Attributes)),write('Frame is added').
+%the delete module deletes the given Frame from the database using retract function
+%if the mentioned frame is not present in the database, it retuens back with an error-no frame to delete
+
+delete(Frame) - retract(frame(Frame,_)).
+delete(Frame) - error(['No frame ', Frame, ' to delete']).
+%the query module finds the given frame, slot and returns the value present in it
+%the query is modified for frames that hold relations with other frames like ako, is_a etc
+
+query(Frame,Slot,Value) - frame(Frame,Slots),member(Slot-Value,Slots).
+query(Frame,Slot,Value) - frame(Frame,Slots),member(is_a-Class,Slots),query(Class,Slot,Value).
+query(Frame,Slot,Value) - frame(Frame,Slots),member(a_part_ofClass,Slots),query(Class,Slot,Value).
+query(Frame,Slot,Value) - frame(Frame,Slots),member(ako-Parent,Slots),query(Parent,Slot,Value).
