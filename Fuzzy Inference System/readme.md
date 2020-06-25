@@ -11,7 +11,7 @@ Inputs:
  
 ## Implementation  
 
-### Defining membership Functions
+### Defining Membership Functions
 
 1. ACADEMICS: Define and fuzzy membership function 
 	  
@@ -80,9 +80,9 @@ Performance is distributed in three ranges ie, poor, average and good. If the cu
 ### Defining Fuzzy Rule Based System
   
 Based on the nature of FIS input and output variables used and general logical sense, a rule base is defined that suits best for our student performance model.
-<pr>
+<pre>
 RULE BASE: 
-	1. If (academics is good) then (performance is good) (1)  
+	1. If (academics is good) then (performance is good) 
 	2. If (academics is average) and (sports is good) and (co-curricular is good) then (performance is good) 
 	3. If (academics is average) and (sports is good) and (co-curricular is not good) then (performance is good) 
 	4. If (academics is average) and (sports is not good) and (co-curricular is good) then (performance is good) 
@@ -98,11 +98,11 @@ RULE BASE:
      <td><img src="https://github.com/tatae3012/Prolog/blob/master/Fuzzy%20Inference%20System/ScreenShots/9.jpg"></td>
     </tr>
   </table>
-</pr>  
+</pre>  
  
 ### Results
 
-We get the following results on developing FIS to compute performance of the student. 	 
+The following results are obtained on developing FIS to compute performance of the student. 	 
  
   <table>
     <tr>
