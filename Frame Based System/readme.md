@@ -4,6 +4,6 @@
 
   <table>
     <tr>
-     <td><img src="/ScreenShots/1.png"></td>
+     <td><img src="/1.png"></td>
     </tr>
   </table>
